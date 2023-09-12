@@ -1,6 +1,4 @@
-from array import array
-
-def get_column(file_name, query_column, query_value, result_column):
+def get_column(file_name, query_column, query_value, result_column = 1):
     
     file = open(file_name, 'r')
     col_vals = []
@@ -8,7 +6,7 @@ def get_column(file_name, query_column, query_value, result_column):
     for line in file:
         l = line.split(',')
         if l[query_column] == query_value:
-            col_vals = col_vals.append(l[result_column])
+            col_vals.append(l[result_column])
         
     file.close()
     
