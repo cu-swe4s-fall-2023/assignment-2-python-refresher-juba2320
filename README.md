@@ -14,7 +14,9 @@ The input for the error free example is as follows:
 In the examples with errors, one example does not provide the arguments and the other example inputs the wrong type of parameter.
 
 ## print_fires.py
-This python file takes in the arguments inputted by the user and passes them to the function in my_utils.py 
+This python file takes in the arguments inputted by the user and passes them to the function in my_utils.py in the main function.  
 
 ## my_utils.py 
-This python file is a library for the functions used in print_fires.py. It consists of two functions: get_column which gets the values from the column and file_access which checks whether the file is valid to pass into get_column. 
+This python file is a library for the functions used in print_fires.py. It consists of two functions: 
+1. get_column which gets the values from the column
+2. file_access which checks whether the file is valid to pass into get_column
