@@ -15,10 +15,14 @@ The input for the error free example is as follows:
 In the examples with errors, one example does not provide the arguments and the other example inputs the wrong type of parameter.
 
 ## print_fires.py
-This python file takes in the arguments inputted by the user and passes them to the function in my_utils.py in the main function.  
+This python file takes in the arguments inputted by the user and passes them to the function in my_utils.py in the main function. The user needs to enter arguments of these types for each argument:
+- file_name = string
+- country = string
+- country_column = integer
+- fires_column = integer 
 
 ## my_utils.py 
 This python file is a library for the functions used in print_fires.py. It consists of three functions: 
 1. get_column which gets the values from the column
 2. file_access which checks whether the file is valid to pass into get_column
-3. convert_value which converts values to integer and float types 
+3. convert_value which converts values from the file to integer and float types 
