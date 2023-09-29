@@ -3,7 +3,7 @@
     * file_access - returns the name of the file if it's valid
     * convert_value - returns the converted list where integers and floats are converted from string values
 """
-
+import math 
 
 def get_column(file_name, query_column, query_value, result_column=1):
     """Read file by line and get information desired on the arguments inputted.
@@ -98,3 +98,71 @@ def convert_value(line):
         converted_line.append(val_convert)
 
     return converted_line
+
+
+def find_mean(arr):
+    """Finds the mean of an array of integers.
+
+    Parameters
+    ----------
+    arr : array of int
+           Array of integers.
+
+    Returns
+    -------
+    mean
+        The mean value of an array of integers.
+    """
+
+    mean = sum(arr)/len(arr)
+    return mean
+
+
+def find_median(arr):
+    """Finds the median of an array of integers.
+
+    Parameters
+    ----------
+    arr : array of int
+           Array of integers.
+
+    Returns
+    -------
+    median
+        The median value of an array of integers.
+    """
+
+    arr.sort()
+    midpt = len(arr) // 2
+
+    if midpt % 2 == 0:
+        mean = (arr[midpt-1] + arr[midpt]) / 2
+        return median
+    else:
+        mean = arr[midpt]
+        return median
+
+
+def find_sd(arr):
+    """Finds the standard deviation of an array of integers.
+
+    Parameters
+    ----------
+    arr : array of int
+           Array of integers.
+
+    Returns
+    -------
+    sd
+        The standard deviation value of an array of integers.
+    """
+    
+    mean = find_mean(arr)
+    summation = 0
+
+    for x in arr:
+        summation += (x - mean) ** 2
+
+    sd = math.sqrt(summation/(len(arr)-1))
+
+    return sd
