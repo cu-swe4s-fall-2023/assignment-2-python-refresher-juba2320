@@ -1,5 +1,5 @@
 import sys 
-sys.path.insert(0,'/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src')
+sys.path.insert(0,'../../src')
 import my_utils
 import unittest
 from random import randint
