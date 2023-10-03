@@ -26,6 +26,10 @@ parser.add_argument('--fires_column',
                     type=int,
                     help='Fires column number from index 0',
                     required=False)
+parser.add_argument('--operation',
+                    type=str,
+                    help = 'Operation to be performed on returned values',
+                    required=False)
 args = parser.parse_args()
 
 
@@ -36,7 +40,16 @@ def main():
                              query_value=args.country,
                              result_column=args.fires_column)
 
-    print(fires)
+    # perform operation on values  
+    if arg.operation.lower() == 'mean':
+        print(utils.find_mean(fires))
+    else if arg.operation.lower() == 'median':
+        print(utils.find_median(fires))
+    else if arg.operation.lower() == 'stdev':
+        print(utils.find_sd(fires))
+    else:
+        print(fires)
+
     sys.exit(1)
 
 
