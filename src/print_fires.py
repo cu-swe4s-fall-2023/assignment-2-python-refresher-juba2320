@@ -40,17 +40,22 @@ def main():
                              query_value=args.country,
                              result_column=args.fires_column)
 
-    # perform operation on values  
-    if arg.operation.lower() == 'mean':
-        print(utils.find_mean(fires))
-    else if arg.operation.lower() == 'median':
-        print(utils.find_median(fires))
-    else if arg.operation.lower() == 'stdev':
-        print(utils.find_sd(fires))
-    else:
-        print(fires)
+    # check if the returned list is not empty
+    if len(fires) != 0:
+        # perform operation on values  
+        if args.operation.lower() == 'mean':
+            print(round(utils.find_mean(fires), 8))
+        elif args.operation.lower() == 'median':
+            print(round(utils.find_median(fires),8))
+        elif args.operation.lower() == 'stdev':
+            print(round(utils.find_sd(fires),8))
+        else:
+            print(fires)
 
-    sys.exit(1)
+    else:
+        sys.exit(1)
+    
+    
 
 
 if __name__ == '__main__':
