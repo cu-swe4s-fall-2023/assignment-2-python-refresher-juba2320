@@ -47,3 +47,6 @@ Functional tests have also been added to test both the operations and also the a
 ```
 bash test_print_fires.sh
 ```
+
+## Continuous Integration
+In the .github/workflows directory, is a file named tests.yml which has a simple continuous integration workflow for the code. It runs for style checks, unit tests, and functional tests. 
