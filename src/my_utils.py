@@ -1,7 +1,7 @@
 """Grabbing column values
     * get_column - returns a list of values based on the inputted arguments
     * file_access - returns the name of the file if it's valid
-    * convert_value - returns the converted list where ints and floats are converted from str values
+    * convert_value - returns a converted list of floats from str values
     * find_mean - returns the mean of an array
     * find_median - returns the median of an array
     * find_sd - returns the sample standard deviation of an array
@@ -42,7 +42,7 @@ def get_column(file_name, query_column, query_value, result_column=1):
         parsed_ln = convert_value(ln)
         # exceptions for indexes out of range
         try:
-            # get the desired numbers based on the inputted arguments for columns
+            # get numbers based on the inputted arguments for columns
             if parsed_ln[query_column] == query_value:
                 col_vals.append(parsed_ln[result_column])
         except IndexError:

@@ -28,7 +28,7 @@ parser.add_argument('--fires_column',
                     required=False)
 parser.add_argument('--operation',
                     type=str,
-                    help = 'Operation to be performed on returned values',
+                    help='Operation to be performed on returned values',
                     required=False)
 args = parser.parse_args()
 
@@ -42,20 +42,18 @@ def main():
 
     # check if the returned list is not empty
     if len(fires) != 0:
-        # perform operation on values  
+        # perform operation on values
         if args.operation.lower() == 'mean':
             print(round(utils.find_mean(fires), 8))
         elif args.operation.lower() == 'median':
-            print(round(utils.find_median(fires),8))
+            print(round(utils.find_median(fires), 8))
         elif args.operation.lower() == 'stdev':
-            print(round(utils.find_sd(fires),8))
+            print(round(utils.find_sd(fires), 8))
         else:
             print(fires)
 
     else:
         sys.exit(1)
-    
-    
 
 
 if __name__ == '__main__':
