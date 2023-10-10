@@ -1,7 +1,7 @@
 name: Testing
 
 on:
-  pull: 
+  push: 
   pull_request:
     branches: [ master ]
 
