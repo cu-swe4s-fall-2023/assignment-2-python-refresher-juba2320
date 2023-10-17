@@ -33,10 +33,12 @@ args = parser.parse_args()
 
 
 def main():
+    # get data 
     data = utils.get_column(file_name=args.file_name,
                             query_column=args.filter_column,
                             query_value=args.filter,
                             result_column=args.data_column)
+    # plot data 
     if len(data) != 0:
         utils.graph_hist(data, args.data_name, args.filter)
     else:
