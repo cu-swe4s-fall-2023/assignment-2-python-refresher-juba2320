@@ -1,0 +1,2 @@
+SyntaxError in file /home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/Snakefile, line 34:
+unterminated string literal (detected at line 35 (Snakefile, line 34)

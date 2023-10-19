@@ -1,0 +1,74 @@
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however crucial for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+all                        1
+get_data                   1
+plot_country0_fires        1
+plot_country1_fires        1
+plot_country2_fires        1
+total                      5
+
+Select jobs to execute...
+
+[Thu Oct 19 16:46:16 2023]
+rule get_data:
+    output: ../../../doc/Agrofood_co2_emission.csv
+    jobid: 2
+    reason: Missing output files: ../../../doc/Agrofood_co2_emission.csv
+    resources: tmpdir=/tmp
+
+Activating conda environment: .snakemake/conda/396349174c567cb60ab62534de17aa49_
+[Thu Oct 19 16:46:18 2023]
+Finished job 2.
+1 of 5 steps (20%) done
+Select jobs to execute...
+
+[Thu Oct 19 16:46:18 2023]
+rule plot_country1_fires:
+    input: ../../../doc/Agrofood_co2_emission.csv
+    output: ../../../doc/Uganda_savannah_fires.png
+    jobid: 3
+    reason: Missing output files: ../../../doc/Uganda_savannah_fires.png; Input files updated by another job: ../../../doc/Agrofood_co2_emission.csv
+    resources: tmpdir=/tmp
+
+Activating conda environment: .snakemake/conda/396349174c567cb60ab62534de17aa49_
+
+[Thu Oct 19 16:46:18 2023]
+rule plot_country0_fires:
+    input: ../../../doc/Agrofood_co2_emission.csv
+    output: ../../../doc/Canada_savannah_fires.png
+    jobid: 1
+    reason: Missing output files: ../../../doc/Canada_savannah_fires.png; Input files updated by another job: ../../../doc/Agrofood_co2_emission.csv
+    resources: tmpdir=/tmp
+
+Activating conda environment: .snakemake/conda/396349174c567cb60ab62534de17aa49_
+
+[Thu Oct 19 16:46:18 2023]
+rule plot_country2_fires:
+    input: ../../../doc/Agrofood_co2_emission.csv
+    output: ../../../doc/Cambodia_savannah_fires.png
+    jobid: 4
+    reason: Missing output files: ../../../doc/Cambodia_savannah_fires.png; Input files updated by another job: ../../../doc/Agrofood_co2_emission.csv
+    resources: tmpdir=/tmp
+
+Activating conda environment: .snakemake/conda/396349174c567cb60ab62534de17aa49_
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule plot_country0_fires in file /home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/Snakefile, line 17:
+Job 1  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+../../../doc/Canada_savannah_fires.png
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule plot_country1_fires in file /home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/Snakefile, line 27:
+Job 3  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+../../../doc/Uganda_savannah_fires.png
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule plot_country2_fires in file /home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/Snakefile, line 37:
+Job 4  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+../../../doc/Cambodia_savannah_fires.png
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-10-19T164614.469813.snakemake.log

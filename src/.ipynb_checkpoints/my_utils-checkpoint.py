@@ -1,12 +1,14 @@
-"""Grabbing column values
+"""Utility library for getting values, graphing, and operations
     * get_column - returns a list of values based on the inputted arguments
     * file_access - returns the name of the file if it's valid
     * convert_value - returns a converted list of floats from str values
     * find_mean - returns the mean of an array
     * find_median - returns the median of an array
     * find_sd - returns the sample standard deviation of an array
+    * graph_hist - graphs histogram and saves it as png
 """
 import math
+import matplotlib.pyplot as plt
 
 
 def get_column(file_name, query_column, query_value, result_column=1):
@@ -178,3 +180,31 @@ def find_sd(arr):
         sd = 0
 
     return sd
+
+
+def graph_hist(data, xlab, title, output):
+    """Plots the histogram of a list of numbers.
+
+    Parameters
+    ----------
+    data : array of floats
+           Values to be plotted
+    xlab : str
+           X-axis label
+    title : str
+           Title of plot
+    output:
+           Name of the file to be outputted along with path
+
+    Returns
+    -------
+    Saved png file of the plot.
+    """
+
+    plt.hist(data, bins='auto', edgecolor='black')
+    plt.title(title)
+    plt.xlabel(xlab)
+    plt.ylabel('Frequency')
+
+    # write out to doc directory
+    plt.savefig(output, bbox_inches='tight')
