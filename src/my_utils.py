@@ -204,5 +204,6 @@ def graph_hist(data, xlab, title):
     plt.xlabel(xlab)
     plt.ylabel('Frequency')
 
-    out_file = f"{title}_{xlab}.png"
+    # write out to doc directory 
+    out_file = f"../../../doc/{title}_{xlab}.png"
     plt.savefig(out_file, bbox_inches='tight')
