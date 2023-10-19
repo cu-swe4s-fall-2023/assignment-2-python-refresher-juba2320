@@ -1,0 +1,3 @@
+NameError in file /home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/Snakefile, line 3:
+name 'COUNTRIES' is not defined
+  File "/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/Snakefile", line 3, in <module>

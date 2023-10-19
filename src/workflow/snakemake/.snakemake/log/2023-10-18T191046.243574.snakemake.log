@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in rule all in file /home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/Snakefile, line 3:
+Missing input files for rule all:
+    affected files:
+        Agrofood_co2_emission.csv

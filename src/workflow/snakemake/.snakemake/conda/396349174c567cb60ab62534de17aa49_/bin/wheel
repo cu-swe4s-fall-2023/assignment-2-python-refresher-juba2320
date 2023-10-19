@@ -1,0 +1,11 @@
+#!/bin/sh
+'''exec' "/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/.snakemake/conda/396349174c567cb60ab62534de17aa49_/bin/python3.6" "$0" "$@" #'''
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from wheel.cli import main
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())

@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule plot_country0_fires in file /home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/Snakefile, line 4:
+Missing input files for rule plot_country0_fires:
+    output: Canada_savannah fires.png
+    affected files:
+        Agrofood_co2_emission.csv
