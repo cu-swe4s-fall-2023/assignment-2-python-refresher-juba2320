@@ -2,9 +2,9 @@ COUNTRIES = ["Canada", "Uganda", "Cambodia"]
 
 rule all:
     input:
-        '../../../doc/' + COUNTRIES[0] + '_savannah_fires.png',
-        '../../../doc/' + COUNTRIES[1] + '_savannah_fires.png',
-        '../../../doc/' + COUNTRIES[2] + '_savannah_fires.png'
+        '../../../doc/' + COUNTRIES[0] + '.png',
+        '../../../doc/' + COUNTRIES[1] + '.png',
+        '../../../doc/' + COUNTRIES[2] + '.png'
 
 rule get_data:
     output:
@@ -18,31 +18,31 @@ rule plot_country0_fires:
     input: 
         '../../../doc/Agrofood_co2_emission.csv'
     output:
-        '../../../doc/' + COUNTRIES[0] + '_savannah_fires.png',
+        '../../../doc/' + COUNTRIES[0] + '.png',
     conda:
         "env.yml"
     shell:
-        "python ../../plot_data.py --file_name {input} --filter " + COUNTRIES[0] + " --filter_column 0 --data_name savannah_fires --data_column 2"
+        "python ../../plot_data.py --file_name {input} --filter " + COUNTRIES[0] + " --filter_column 0 --data_name savannah_fires --data_column 2 --output_filename ../../../doc/" + COUNTRIES[0] + ".png"
 
 rule plot_country1_fires:
     input: 
         '../../../doc/Agrofood_co2_emission.csv'
     output:
-        '../../../doc/' + COUNTRIES[1] + '_savannah_fires.png',
+        '../../../doc/' + COUNTRIES[1] + '.png',
     conda:
         "env.yml"
     shell:
-        "python ../../plot_data.py --file_name {input} --filter " + COUNTRIES[1] + " --filter_column 0 --data_name savannah_fires --data_column 2"
+        "python ../../plot_data.py --file_name {input} --filter " + COUNTRIES[1] + " --filter_column 0 --data_name savannah_fires --data_column 2 --output_filename ../../../doc/" + COUNTRIES[1] + ".png"
         
 rule plot_country2_fires:
     input: 
         '../../../doc/Agrofood_co2_emission.csv'
     output:
-        '../../../doc/' + COUNTRIES[2] + '_savannah_fires.png',
+        '../../../doc/' + COUNTRIES[2] + '.png',
     conda:
         "env.yml"
     shell:
-        "python ../../plot_data.py --file_name {input} --filter " + COUNTRIES[2] + " --filter_column 0 --data_name savannah_fires --data_column 2"
+        "python ../../plot_data.py --file_name {input} --filter " + COUNTRIES[2] + " --filter_column 0 --data_name savannah_fires --data_column 2 --output_filename ../../../doc/" + COUNTRIES[2] + ".png"
 
 
 
