@@ -1,0 +1,67 @@
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however crucial for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+all                        1
+plot_country0_fires        1
+plot_country1_fires        1
+plot_country2_fires        1
+total                      4
+
+Select jobs to execute...
+
+[Thu Oct 19 18:09:14 2023]
+rule plot_country1_fires:
+    input: ../../../doc/Agrofood_co2_emission.csv
+    output: ../../../doc/Uganda.png
+    jobid: 3
+    reason: Missing output files: ../../../doc/Uganda.png
+    resources: tmpdir=/tmp
+
+Activating conda environment: .snakemake/conda/396349174c567cb60ab62534de17aa49_
+
+[Thu Oct 19 18:09:14 2023]
+rule plot_country0_fires:
+    input: ../../../doc/Agrofood_co2_emission.csv
+    output: ../../../doc/Canada.png
+    jobid: 1
+    reason: Missing output files: ../../../doc/Canada.png
+    resources: tmpdir=/tmp
+
+Activating conda environment: .snakemake/conda/396349174c567cb60ab62534de17aa49_
+
+[Thu Oct 19 18:09:14 2023]
+rule plot_country2_fires:
+    input: ../../../doc/Agrofood_co2_emission.csv
+    output: ../../../doc/Cambodia.png
+    jobid: 4
+    reason: Missing output files: ../../../doc/Cambodia.png
+    resources: tmpdir=/tmp
+
+Activating conda environment: .snakemake/conda/396349174c567cb60ab62534de17aa49_
+[Thu Oct 19 18:09:16 2023]
+Finished job 3.
+1 of 4 steps (25%) done
+[Thu Oct 19 18:09:16 2023]
+Finished job 4.
+2 of 4 steps (50%) done
+[Thu Oct 19 18:09:16 2023]
+Finished job 1.
+3 of 4 steps (75%) done
+Select jobs to execute...
+
+[Thu Oct 19 18:09:16 2023]
+localrule all:
+    input: ../../../doc/Canada.png, ../../../doc/Uganda.png, ../../../doc/Cambodia.png
+    jobid: 0
+    reason: Input files updated by another job: ../../../doc/Uganda.png, ../../../doc/Cambodia.png, ../../../doc/Canada.png
+    resources: tmpdir=/tmp
+
+[Thu Oct 19 18:09:16 2023]
+Finished job 0.
+4 of 4 steps (100%) done
+Complete log: .snakemake/log/2023-10-19T180911.943024.snakemake.log

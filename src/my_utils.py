@@ -182,7 +182,7 @@ def find_sd(arr):
     return sd
 
 
-def graph_hist(data, xlab, title):
+def graph_hist(data, xlab, title, output):
     """Plots the histogram of a list of numbers.
 
     Parameters
@@ -193,6 +193,8 @@ def graph_hist(data, xlab, title):
            X-axis label
     title : str
            Title of plot
+    output:
+           Name of the file to be outputted along with path
 
     Returns
     -------
@@ -204,5 +206,5 @@ def graph_hist(data, xlab, title):
     plt.xlabel(xlab)
     plt.ylabel('Frequency')
 
-    out_file = f"{title}_{xlab}.png"
-    plt.savefig(out_file, bbox_inches='tight')
+    # write out to doc directory
+    plt.savefig(output, bbox_inches='tight')
