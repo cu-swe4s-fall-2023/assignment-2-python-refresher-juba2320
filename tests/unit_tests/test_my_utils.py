@@ -61,7 +61,7 @@ class TestCalc(unittest.TestCase):
     # graph histogram function test cases
     def test_graph_basic_hist(self):
         data = [100, 9, 79, 59, 2, 58, 42, 77, 47, 81]
-        expected_file = "../../doc/title.png"
+        expected_file = "../../doc/test_title.png"
         my_utils.graph_hist(data, "value", "title", expected_file)
         self.assertTrue(os.path.exists(expected_file))
 
