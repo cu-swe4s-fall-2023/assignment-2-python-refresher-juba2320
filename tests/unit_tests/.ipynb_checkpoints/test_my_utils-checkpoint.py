@@ -4,6 +4,7 @@ import my_utils
 import unittest
 from random import uniform
 import statistics
+import os
 
 
 class TestCalc(unittest.TestCase):
@@ -56,6 +57,13 @@ class TestCalc(unittest.TestCase):
         for i in range(100):
             array = [uniform(-8.0, 100.0), uniform(1.0, 100.0), uniform(-100.0, 100.0), uniform(-40.0, 100.0), uniform(5.0, 100.0)]
             self.assertEqual(round(my_utils.find_sd(array), 8), round(statistics.stdev(array), 8))
+
+    # graph histogram function test cases
+    def test_graph_basic_hist(self):
+        data = [100, 9, 79, 59, 2, 58, 42, 77, 47, 81]
+        expected_file = "../../doc/test_title.png"
+        my_utils.graph_hist(data, "value", "title", expected_file)
+        self.assertTrue(os.path.exists(expected_file))
 
 
 if __name__ == 'main':
