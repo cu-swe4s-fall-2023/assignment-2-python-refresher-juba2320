@@ -9,3 +9,4 @@ run basic_snakemake conda install -c conda-forge -c bioconda snakemake graphviz 
 assert_equal $country0_file_name $( ls $country0_file_name )
 assert_equal $country1_file_name $( ls $country1_file_name )
 assert_equal $country2_file_name $( ls $country2_file_name )
+assert_exit_code 0 
