@@ -1,0 +1,9 @@
+prefix=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+
+Name: pthread stubs
+Description: Meta package for pthread symbols - defaults to heavyweight ones if the C runtime does not provide lightweight ones.
+Version: 0.4
+Cflags: 
+Libs: 

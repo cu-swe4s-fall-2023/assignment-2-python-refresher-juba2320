@@ -1,0 +1,17 @@
+prefix=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+sysconfdir=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_/etc
+localstatedir=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_/var
+confdir=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_/etc/fonts
+cachedir=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_/var/cache/fontconfig
+
+Name: Fontconfig
+Description: Font configuration and customization library
+Version: 2.14.2
+Requires: freetype2 >=  21.0.15
+Requires.private: expat
+Libs: -L${libdir} -lfontconfig
+Libs.private: -pthread
+Cflags: -I${includedir}
