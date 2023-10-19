@@ -44,7 +44,8 @@ def main():
                             result_column=args.data_column)
     # plot data
     if len(data) != 0:
-        utils.graph_hist(data, args.data_name, args.filter, args.output_filename)
+        utils.graph_hist(data, args.data_name,
+                         args.filter, args.output_filename)
     else:
         sys.exit(1)
 
