@@ -52,6 +52,9 @@ bash file_name
 ## Continuous Integration
 In the .github/workflows directory, is a file named tests.yml which has a simple continuous integration workflow for the code. It runs for style checks, unit tests, and functional tests. 
 
+## Docs
+All docs including generated png outputs are in the doc directory. 
+
 # Assignment 6: Snakemake Workflow
 ## Introduction 
 We want to do some exploratory data analysis on the Agrofood_co2_emission dataset and to do that we are going to create three figures to look at the distributions based on different aspects of the data with a histogram. For this example, we want to look at the distribution of savannah fires across 3 different countries: Canada, Uganda, and Cambodia. With these plots we might be able to potentially identify which of the three countries had more savannah fires than the other overall. 
@@ -60,7 +63,15 @@ We want to do some exploratory data analysis on the Agrofood_co2_emission datase
 The results for both Uganda and Cambodia seem normally distributed while the results for Canada are skewed to the right. Out of all three countries it seems like Canada would have the lowest average savannah fires, which is most likely due to the fast that Canada is much colder than the other two countries. Uganda seems like it would have the highest average savannah fires out of the three countries. 
 
 ## Methods 
-To get these plots, I added a histogram plotting function to my_utils.py and then created a script, named plot_data.py, to take in parameters to pass in to that function. I used a snakemake file to facilitate the workflow for each country plot. To run the snakemake file go to the snakemake directory (src/workflow/snakemake) and run:
+To get these plots, I added a histogram plotting function to my_utils.py and then created a script, named plot_data.py, to take in parameters to pass in to that function. The parameters are:
+- file_name: name of the file (str)
+- filter: criteria to filter data by (str)
+- filter_column: column with filter criteria (int)
+- data_name: name of the data to get (str)
+- data_column: column where data is (int)
+- output_filename: specifies the name of the file and the path (str) 
+
+I used a snakemake file to facilitate the workflow for each country plot. To run the snakemake file go to the snakemake directory (src/workflow/snakemake) and run:
 
 ```
 snakemake --use-conda --cores all 
