@@ -29,6 +29,10 @@ parser.add_argument('--data_column',
                     type=int,
                     help='Data value column number from index 0',
                     required=True)
+parser.add_argument('--output_filename',
+                    type=str,
+                    help='Name of the output file and path',
+                    required=True)
 args = parser.parse_args()
 
 
@@ -40,7 +44,7 @@ def main():
                             result_column=args.data_column)
     # plot data
     if len(data) != 0:
-        utils.graph_hist(data, args.data_name, args.filter)
+        utils.graph_hist(data, args.data_name, args.filter, args.output_filename)
     else:
         sys.exit(1)
 
