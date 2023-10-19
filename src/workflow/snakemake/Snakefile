@@ -1,0 +1,49 @@
+COUNTRIES = ["Canada", "Uganda", "Cambodia"]
+
+rule all:
+    input:
+        COUNTRIES[0] + '_savannah_fires.png',
+        COUNTRIES[1] + '_savannah_fires.png',
+        COUNTRIES[2] + '_savannah_fires.png'
+
+rule get_data:
+    output:
+        'Agrofood_co2_emission.csv'
+    conda:
+        "env.yml"
+    shell:
+        "wget -O {output} \'https://docs.google.com/uc?export=download&id=1Wytf3ryf9EtOwaloms8HEzLG0yjtRqxr\'"
+        
+rule plot_country0_fires:
+    input: 
+        'Agrofood_co2_emission.csv'
+    output:
+        COUNTRIES[0] + '_savannah_fires.png',
+    conda:
+        "env.yml"
+    shell:
+        "python ../../plot_data.py --file_name {input} --filter " + COUNTRIES[0] + " --filter_column 0 --data_name savannah_fires --data_column 2"
+
+rule plot_country1_fires:
+    input: 
+        'Agrofood_co2_emission.csv'
+    output:
+        COUNTRIES[1] + '_savannah_fires.png',
+    conda:
+        "env.yml"
+    shell:
+        "python ../../plot_data.py --file_name {input} --filter " + COUNTRIES[1] + " --filter_column 0 --data_name savannah_fires --data_column 2"
+        
+rule plot_country2_fires:
+    input: 
+        'Agrofood_co2_emission.csv'
+    output:
+        COUNTRIES[2] + '_savannah_fires.png',
+    conda:
+        "env.yml"
+    shell:
+        "python ../../plot_data.py --file_name {input} --filter " + COUNTRIES[2] + " --filter_column 0 --data_name savannah_fires --data_column 2"
+
+
+
+        

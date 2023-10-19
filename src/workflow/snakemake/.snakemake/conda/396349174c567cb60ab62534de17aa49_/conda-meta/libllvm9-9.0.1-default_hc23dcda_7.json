@@ -1,0 +1,61 @@
+{
+  "build": "default_hc23dcda_7",
+  "build_number": 7,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=9.4.0",
+    "libstdcxx-ng >=9.4.0",
+    "libzlib >=1.2.11,<1.3.0a0"
+  ],
+  "extracted_package_dir": "/home/jovyan/.conda/pkgs/libllvm9-9.0.1-default_hc23dcda_7",
+  "features": "",
+  "files": [
+    "lib/libLLVM-9.so",
+    "lib/libLTO.so.9",
+    "lib/libRemarks.so.9"
+  ],
+  "fn": "libllvm9-9.0.1-default_hc23dcda_7.tar.bz2",
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "link": {
+    "source": "/home/jovyan/.conda/pkgs/libllvm9-9.0.1-default_hc23dcda_7",
+    "type": 1
+  },
+  "md5": "9f4686a2c319355fe8636ca13783c3b4",
+  "name": "libllvm9",
+  "package_tarball_full_path": "/home/jovyan/.conda/pkgs/libllvm9-9.0.1-default_hc23dcda_7.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libLLVM-9.so",
+        "path_type": "hardlink",
+        "sha256": "8912b96175465fcc9b8ee75e2ebe2389e80549c2cea6b27ed282323539e76932",
+        "sha256_in_prefix": "8912b96175465fcc9b8ee75e2ebe2389e80549c2cea6b27ed282323539e76932",
+        "size_in_bytes": 91437288
+      },
+      {
+        "_path": "lib/libLTO.so.9",
+        "path_type": "hardlink",
+        "sha256": "2b6c2e67a01be3ec75cb0b6c8e48c489f9072f31ff31e9e684619669d14a18b0",
+        "sha256_in_prefix": "2b6c2e67a01be3ec75cb0b6c8e48c489f9072f31ff31e9e684619669d14a18b0",
+        "size_in_bytes": 212144
+      },
+      {
+        "_path": "lib/libRemarks.so.9",
+        "path_type": "hardlink",
+        "sha256": "d10d2355127c27ce1e228b8c4437d5ce30c911ef0db407781b80f9dc51a4a877",
+        "sha256_in_prefix": "d10d2355127c27ce1e228b8c4437d5ce30c911ef0db407781b80f9dc51a4a877",
+        "size_in_bytes": 15232
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "404537f0f88f470c3e7f512ec4e01aa719747ced5ca260582bd2df37fca40e79",
+  "size": 26837085,
+  "subdir": "linux-64",
+  "timestamp": 1642246188000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libllvm9-9.0.1-default_hc23dcda_7.tar.bz2",
+  "version": "9.0.1"
+}

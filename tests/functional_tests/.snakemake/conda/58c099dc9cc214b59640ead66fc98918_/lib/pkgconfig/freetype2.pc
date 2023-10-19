@@ -1,0 +1,14 @@
+prefix=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_
+exec_prefix=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_
+libdir=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_/lib
+includedir=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 24.3.18
+Requires: 
+Requires.private: zlib, libpng
+Libs: -L/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_/lib -lfreetype
+Libs.private: 
+Cflags: -I${includedir}/freetype2

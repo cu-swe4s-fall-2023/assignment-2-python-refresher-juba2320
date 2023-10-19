@@ -1,0 +1,53 @@
+{
+  "build": "default_hb4e5071_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=10.3.0",
+    "libllvm9 >=9.0.1,<9.1.0a0",
+    "libstdcxx-ng >=10.3.0"
+  ],
+  "extracted_package_dir": "/home/jovyan/.conda/pkgs/libclang-9.0.1-default_hb4e5071_5",
+  "features": "",
+  "files": [
+    "lib/libclang.so",
+    "lib/libclang.so.9"
+  ],
+  "fn": "libclang-9.0.1-default_hb4e5071_5.tar.bz2",
+  "license": "NCSA",
+  "link": {
+    "source": "/home/jovyan/.conda/pkgs/libclang-9.0.1-default_hb4e5071_5",
+    "type": 1
+  },
+  "md5": "9dde69aa2a8ecd575a16e44987bdc9f7",
+  "name": "libclang",
+  "package_tarball_full_path": "/home/jovyan/.conda/pkgs/libclang-9.0.1-default_hb4e5071_5.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libclang.so",
+        "path_type": "hardlink",
+        "sha256": "92657bf493661fa52f7099bb3faa317c570bf1a8c48ff992cc87c198723f0920",
+        "sha256_in_prefix": "92657bf493661fa52f7099bb3faa317c570bf1a8c48ff992cc87c198723f0920",
+        "size_in_bytes": 41034216
+      },
+      {
+        "_path": "lib/libclang.so.9",
+        "path_type": "hardlink",
+        "sha256": "92657bf493661fa52f7099bb3faa317c570bf1a8c48ff992cc87c198723f0920",
+        "sha256_in_prefix": "92657bf493661fa52f7099bb3faa317c570bf1a8c48ff992cc87c198723f0920",
+        "size_in_bytes": 41034216
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "27dee1d46ea68d2376f23d882136778f02cc351bb1f7bafcbdd161b9ea15c85f",
+  "size": 24208081,
+  "subdir": "linux-64",
+  "timestamp": 1652180344000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libclang-9.0.1-default_hb4e5071_5.tar.bz2",
+  "version": "9.0.1"
+}

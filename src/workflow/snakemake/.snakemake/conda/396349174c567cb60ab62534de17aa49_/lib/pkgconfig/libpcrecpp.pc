@@ -1,0 +1,12 @@
+# Package Information for pkg-config
+
+prefix=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/.snakemake/conda/396349174c567cb60ab62534de17aa49_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libpcrecpp
+Description: PCRECPP - C++ wrapper for PCRE
+Version: 8.45
+Libs: -L${libdir} -lpcre -lpcrecpp
+Cflags: -I${includedir} 

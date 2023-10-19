@@ -1,0 +1,13 @@
+# See: man pkg-config
+prefix=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/.snakemake/conda/396349174c567cb60ab62534de17aa49_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Python
+Description: Python library
+Requires: 
+Version: 3.6
+Libs.private: -lpthread -ldl  -lutil -lrt
+Libs: -L${libdir} -lpython3.6m
+Cflags: -I${includedir}/python3.6m

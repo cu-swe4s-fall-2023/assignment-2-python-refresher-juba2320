@@ -1,0 +1,2 @@
+SyntaxError in file /home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/Snakefile, line 4:
+Unexpected keyword COUNTRIES in rule definition (Snakefile, line 4)

@@ -1,0 +1,11 @@
+prefix=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Xdmcp
+Description: X Display Manager Control Protocol library
+Version: 1.1.3
+Requires: xproto
+Cflags: -I${includedir}
+Libs: -L${libdir} -lXdmcp

@@ -1,0 +1,17 @@
+prefix=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/src/workflow/snakemake/.snakemake/conda/396349174c567cb60ab62534de17aa49_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/gstreamer-1.0
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+girdir=${datadir}/gir-1.0
+typelibdir=${libdir}/girepository-1.0
+
+Name: GStreamer SDP Library
+Description: SDP helper functions
+Requires: glib-2.0
+Requires.private: gio-2.0
+Version: 1.14.5
+Libs: -L${libdir} -lgstsdp-1.0
+Cflags: -I${includedir}
+

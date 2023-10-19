@@ -1,0 +1,12 @@
+prefix=/home/jovyan/CSCI4118/assignment-2-python-refresher-juba2320/tests/functional_tests/.snakemake/conda/58c099dc9cc214b59640ead66fc98918_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: expat
+Version: 2.5.0
+Description: expat XML parser
+URL: https://libexpat.github.io/
+Libs: -L${libdir} -lexpat
+Libs.private: -lm
+Cflags: -I${includedir}
