@@ -34,6 +34,7 @@ This python file is a library for the functions used in print_fires.py. It consi
 4. find_mean which finds the mean of a list of values
 5. find_median which finds the median of a list of values
 6. find_sd which finds the standard deviation of a list of values 
+7. graph_hist which graphs a histogram and saves it as a png file
 
 ## Testing
 ### Unit Tests
@@ -43,10 +44,24 @@ python -m unittest test_my_utils.py
 ```
 
 ### Functional Tests
-Functional tests have also been added to test both the operations and also the arguments that get read in inside the test_print_fires.sh script. To run this test file, it needs to be run from within the functional_tests directory with the command:
+Functional tests have also been added to test both the operations and also the arguments that get read in inside the test_print_fires.sh and the test_snakefile.sh script. To run this test file, it needs to be run from within the functional_tests directory with the command:
 ```
-bash test_print_fires.sh
+bash file_name
 ```
 
 ## Continuous Integration
 In the .github/workflows directory, is a file named tests.yml which has a simple continuous integration workflow for the code. It runs for style checks, unit tests, and functional tests. 
+
+# Assignment 6: Snakemake Workflow
+## Introduction 
+We want to do some exploratory data analysis on the Agrofood_co2_emission dataset and to do that we are going to create three figures to look at the distributions based on different aspects of the data with a histogram. For this example, we want to look at the distribution of savannah fires across 3 different countries: Canada, Uganda, and Cambodia. With these plots we might be able to potentially identify which of the three countries had more savannah fires than the other overall. 
+
+## Results
+The results for both Uganda and Cambodia seem normally distributed while the results for Canada are skewed to the right. Out of all three countries it seems like Canada would have the lowest average savannah fires, which is most likely due to the fast that Canada is much colder than the other two countries. Uganda seems like it would have the highest average savannah fires out of the three countries. 
+
+## Methods 
+To get these plots, I added a histogram plotting function to my_utils.py and then created a script, named plot_data.py, to take in parameters to pass in to that function. I used a snakemake file to facilitate the workflow for each country plot. To run the snakemake file go to the snakemake directory (src/workflow/snakemake) and run:
+
+```
+snakemake --use-conda --cores all 
+```
