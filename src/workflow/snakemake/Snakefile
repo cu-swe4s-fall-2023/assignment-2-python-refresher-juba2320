@@ -2,13 +2,13 @@ COUNTRIES = ["Canada", "Uganda", "Cambodia"]
 
 rule all:
     input:
-        COUNTRIES[0] + '_savannah_fires.png',
-        COUNTRIES[1] + '_savannah_fires.png',
-        COUNTRIES[2] + '_savannah_fires.png'
+        '../../../doc/' + COUNTRIES[0] + '_savannah_fires.png',
+        '../../../doc/' + COUNTRIES[1] + '_savannah_fires.png',
+        '../../../doc/' + COUNTRIES[2] + '_savannah_fires.png'
 
 rule get_data:
     output:
-        'Agrofood_co2_emission.csv'
+        '../../../doc/Agrofood_co2_emission.csv'
     conda:
         "env.yml"
     shell:
@@ -16,9 +16,9 @@ rule get_data:
         
 rule plot_country0_fires:
     input: 
-        'Agrofood_co2_emission.csv'
+        '../../../doc/Agrofood_co2_emission.csv'
     output:
-        COUNTRIES[0] + '_savannah_fires.png',
+        '../../../doc/' + COUNTRIES[0] + '_savannah_fires.png',
     conda:
         "env.yml"
     shell:
@@ -26,9 +26,9 @@ rule plot_country0_fires:
 
 rule plot_country1_fires:
     input: 
-        'Agrofood_co2_emission.csv'
+        '../../../doc/Agrofood_co2_emission.csv'
     output:
-        COUNTRIES[1] + '_savannah_fires.png',
+        '../../../doc/' + COUNTRIES[1] + '_savannah_fires.png',
     conda:
         "env.yml"
     shell:
@@ -36,9 +36,9 @@ rule plot_country1_fires:
         
 rule plot_country2_fires:
     input: 
-        'Agrofood_co2_emission.csv'
+        '../../../doc/Agrofood_co2_emission.csv'
     output:
-        COUNTRIES[2] + '_savannah_fires.png',
+        '../../../doc/' + COUNTRIES[2] + '_savannah_fires.png',
     conda:
         "env.yml"
     shell:
